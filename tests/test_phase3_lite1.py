@@ -6,6 +6,7 @@ from pathlib import Path
 
 import pytest
 from openpyxl import load_workbook
+from typer._click.utils import strip_ansi
 from typer.testing import CliRunner
 
 from youtube_comment_research.cli import app
@@ -209,6 +210,7 @@ def test_workbook_appends_theme_and_insight_sheets(tmp_path: Path) -> None:
 
 def test_generate_insights_cli_help_is_available() -> None:
     result = CliRunner().invoke(app, ["generate-insights", "--help"])
+    help_text = strip_ansi(result.output)
     assert result.exit_code == 0
-    assert "--profile" in result.output
-    assert "--output" in result.output
+    assert "--profile" in help_text
+    assert "--output" in help_text

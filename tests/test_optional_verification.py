@@ -5,6 +5,7 @@ from pathlib import Path
 
 import pytest
 from openpyxl import load_workbook
+from typer._click.utils import strip_ansi
 from typer.testing import CliRunner
 
 from youtube_comment_research.cli import app
@@ -265,7 +266,8 @@ def test_workbook_shows_optional_verification_with_decision_sheet(tmp_path: Path
 
 def test_resolve_insights_cli_exposes_optional_review_and_non_strict_default() -> None:
     result = CliRunner().invoke(app, ["resolve-insights", "--help"])
+    help_text = strip_ansi(result.output)
     assert result.exit_code == 0
-    assert "--human-review" in result.output
-    assert "--require-review" in result.output
-    assert "--no-require-review" in result.output
+    assert "--human-review" in help_text
+    assert "--require-review" in help_text
+    assert "--no-require-review" in help_text

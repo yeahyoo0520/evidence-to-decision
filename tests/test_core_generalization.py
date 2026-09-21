@@ -6,6 +6,7 @@ from typing import Any
 
 import pytest
 from openpyxl import load_workbook
+from typer._click.utils import strip_ansi
 from typer.testing import CliRunner
 
 from youtube_comment_research.cli import app
@@ -375,12 +376,14 @@ def test_youtube_workbook_keeps_video_presentation(tmp_path: Path) -> None:
 def test_cli_exposes_generic_input_and_research_context_options() -> None:
     prepare = CliRunner().invoke(app, ["prepare-classification", "--help"])
     insights = CliRunner().invoke(app, ["generate-insights", "--help"])
+    prepare_help = strip_ansi(prepare.output)
+    insights_help = strip_ansi(insights.output)
     assert prepare.exit_code == 0
-    assert "Generic Evidence JSON" in prepare.output
+    assert "Generic Evidence JSON" in prepare_help
     assert insights.exit_code == 0
-    assert "--research-question" in insights.output
-    assert "--decision-context" in insights.output
-    assert "--analysis-mode" in insights.output
+    assert "--research-question" in insights_help
+    assert "--decision-context" in insights_help
+    assert "--analysis-mode" in insights_help
 
 
 def test_youtube_comment_model_remains_backward_compatible() -> None:

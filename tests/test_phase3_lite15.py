@@ -7,6 +7,7 @@ from typing import Any, Callable
 
 import pytest
 from openpyxl import load_workbook
+from typer._click.utils import strip_ansi
 from typer.testing import CliRunner
 
 import youtube_comment_research.cli as cli_module
@@ -490,11 +491,11 @@ def test_workbook_has_no_formula_error_literals(tmp_path: Path) -> None:
 def test_generate_insights_help_lists_new_options() -> None:
     result = CliRunner().invoke(app, ["generate-insights", "--help"])
     assert result.exit_code == 0
-    help_text = " ".join(result.output.split())
-    assert "--theme-method" in result.output
-    assert "--theme-batch-size" in result.output
-    assert "--min-evidence-count" in result.output
-    assert "--theme-provider" in result.output
+    help_text = " ".join(strip_ansi(result.output).split())
+    assert "--theme-method" in help_text
+    assert "--theme-batch-size" in help_text
+    assert "--min-evidence-count" in help_text
+    assert "--theme-provider" in help_text
     assert "taxonomy-based" in help_text
     assert "baseline" in help_text
     assert "file-based" in help_text

@@ -5,6 +5,7 @@ from pathlib import Path
 
 import pytest
 from openpyxl import load_workbook
+from typer._click.utils import strip_ansi
 from typer.testing import CliRunner
 
 from youtube_comment_research.cli import app
@@ -273,10 +274,11 @@ def test_file_provider_prepares_reviewable_request_and_consumes_response(tmp_pat
 
 def test_cli_help_exposes_decision_support_contract() -> None:
     result = CliRunner().invoke(app, ["generate-decision-brief", "--help"])
+    help_text = strip_ansi(result.output)
     assert result.exit_code == 0
-    assert "--human-review" in result.output
-    assert "--decision-provider" in result.output
-    assert "--work-dir" in result.output
+    assert "--human-review" in help_text
+    assert "--decision-provider" in help_text
+    assert "--work-dir" in help_text
 
 
 def test_cli_consumes_file_response_and_writes_valid_output(tmp_path: Path) -> None:
