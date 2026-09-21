@@ -1,0 +1,243 @@
+{
+  "profile_id": "general_feedback",
+  "generation_method": "llm-inductive-two-stage-v1",
+  "draft_label": "AI generated draft",
+  "generated_at": "2026-09-11T13:28:09.724488+00:00",
+  "source_comment_count": 15,
+  "research_context": {
+    "research_question": "What helps or hinders successful adoption across the supplied feedback sources?",
+    "decision_context": "Decide which adoption friction or value signal should be validated before prioritizing the next product or communication improvement.",
+    "analysis_mode": "decision_focused"
+  },
+  "themes": [
+    {
+      "theme_id": "theme-c5850e4cfd",
+      "theme_name": "Speed and mobile workflow fit create practical value",
+      "theme_description": "Positive feedback links value to fast setup, responsive mobile use, time saved versus spreadsheets, and use during warehouse inventory work.",
+      "related_categories": [
+        "Positive Signal / Praise",
+        "Usage Context",
+        "Comparison / Alternative"
+      ],
+      "evidence_count": 4,
+      "evidence_comment_ids": [
+        "gf-001",
+        "gf-005",
+        "gf-007",
+        "gf-009"
+      ],
+      "representative_comments": [
+        "The setup guide was clear and I was running in ten minutes.",
+        "Compared with our spreadsheet, this saves hours every Friday.",
+        "I use the mobile view while checking inventory on the warehouse floor."
+      ],
+      "representative_evidence_ids": [
+        "gf-001",
+        "gf-007",
+        "gf-009"
+      ],
+      "discovery_method": "llm_inductive",
+      "taxonomy_coverage": "covered",
+      "coverage_reason": "Positive Signal / Praise captures perceived value, while Usage Context and Comparison / Alternative retain the mobile, warehouse, and spreadsheet contexts.",
+      "confidence": "medium",
+      "review_status": "preliminary"
+    },
+    {
+      "theme_id": "theme-c65fcd309c",
+      "theme_name": "Approval, price, and migration effort block adoption",
+      "theme_description": "Adoption can stall when security approval depends on single sign-on, pricing feels disproportionate for a small team, or switching requires substantial migration effort.",
+      "related_categories": [
+        "Adoption or Purchase Barrier",
+        "Need / Request",
+        "Trust / Risk Concern",
+        "Pain Point",
+        "Comparison / Alternative"
+      ],
+      "evidence_count": 3,
+      "evidence_comment_ids": [
+        "gf-003",
+        "gf-004",
+        "gf-013"
+      ],
+      "representative_comments": [
+        "We need single sign-on before security will approve a rollout.",
+        "The monthly price is too high for a three-person team.",
+        "We are considering switching, but migration effort is the main concern."
+      ],
+      "representative_evidence_ids": [
+        "gf-003",
+        "gf-004",
+        "gf-013"
+      ],
+      "discovery_method": "llm_inductive",
+      "taxonomy_coverage": "covered",
+      "coverage_reason": "The Adoption or Purchase Barrier category directly represents approval, price, and switching-effort constraints, while Need / Request and Comparison / Alternative preserve the secondary meanings.",
+      "confidence": "medium",
+      "review_status": "preliminary"
+    },
+    {
+      "theme_id": "theme-2a393fe610",
+      "theme_name": "Workflow capabilities are evaluated against concrete team needs",
+      "theme_description": "People ask whether the offering supports finance exports, identity-provider integration, and multi-owner task assignment in the workflows they need to complete.",
+      "related_categories": [
+        "Question / Information Need",
+        "Need / Request"
+      ],
+      "evidence_count": 3,
+      "evidence_comment_ids": [
+        "gf-002",
+        "gf-010",
+        "gf-011"
+      ],
+      "representative_comments": [
+        "Can I export invoices as PDF for our finance team?",
+        "Please add a way to assign one task to two owners.",
+        "Does the service integrate with our existing identity provider?"
+      ],
+      "representative_evidence_ids": [
+        "gf-002",
+        "gf-010",
+        "gf-011"
+      ],
+      "discovery_method": "llm_inductive",
+      "taxonomy_coverage": "covered",
+      "coverage_reason": "Question / Information Need and Need / Request together express both capability clarification and an explicit desired workflow change.",
+      "confidence": "medium",
+      "review_status": "preliminary"
+    },
+    {
+      "theme_id": "theme-ec66e6c836",
+      "theme_name": "Workflow failures become service-recovery problems",
+      "theme_description": "Verification, import, and billing failures are compounded by missing replies or unclear recovery information, and one billing case ended in cancellation.",
+      "related_categories": [
+        "Support / Service Issue",
+        "Pain Point"
+      ],
+      "evidence_count": 3,
+      "evidence_comment_ids": [
+        "gf-008",
+        "gf-012",
+        "gf-015"
+      ],
+      "representative_comments": [
+        "The verification email never arrived and support has not replied.",
+        "The import failed twice and the error message did not explain what to fix.",
+        "I cancelled after billing continued during the paused period."
+      ],
+      "representative_evidence_ids": [
+        "gf-008",
+        "gf-012",
+        "gf-015"
+      ],
+      "discovery_method": "llm_inductive",
+      "taxonomy_coverage": "covered",
+      "coverage_reason": "Support / Service Issue and Pain Point directly cover failed recovery, unclear remediation, billing handling, and the associated negative experience.",
+      "confidence": "medium",
+      "review_status": "preliminary"
+    },
+    {
+      "theme_id": "theme-971126ca26",
+      "theme_name": "Trust depends on both governance transparency and auditability",
+      "theme_description": "Evidence shows concern about where customer data is stored alongside a positive trust signal from visible audit history.",
+      "related_categories": [
+        "Trust / Risk Concern",
+        "Positive Signal / Praise"
+      ],
+      "evidence_count": 2,
+      "evidence_comment_ids": [
+        "gf-006",
+        "gf-014"
+      ],
+      "representative_comments": [
+        "Our team is worried about where customer data is stored.",
+        "A colleague recommended it and the audit history makes the process feel trustworthy."
+      ],
+      "representative_evidence_ids": [
+        "gf-006",
+        "gf-014"
+      ],
+      "discovery_method": "llm_inductive",
+      "taxonomy_coverage": "covered",
+      "coverage_reason": "Trust / Risk Concern covers uncertainty about data residency, and Positive Signal / Praise covers the confidence created by audit history.",
+      "confidence": "low",
+      "review_status": "preliminary"
+    }
+  ],
+  "insight_drafts": [
+    {
+      "insight_id": "insight-c5850e4cfd",
+      "theme_id": "theme-c5850e4cfd",
+      "observation": "Feedback describes four forms of practical value: quick initial setup, fast mobile loading, time saved compared with a spreadsheet, and mobile access during warehouse inventory work.",
+      "interpretation": "Speed appears valuable when it reduces setup effort or supports work in context; however, this small qualitative sample cannot show which speed-related experience matters most across the wider user base.",
+      "potential_opportunity": "A potential next step is to validate which speed and mobile-workflow messages resonate with the intended adoption audience.",
+      "evidence_ids": [
+        "gf-001",
+        "gf-005",
+        "gf-007",
+        "gf-009"
+      ],
+      "confidence": "medium",
+      "review_status": "preliminary",
+      "draft_label": "AI generated draft"
+    },
+    {
+      "insight_id": "insight-c65fcd309c",
+      "theme_id": "theme-c65fcd309c",
+      "observation": "Three records identify different adoption constraints: security approval depends on single sign-on, monthly pricing feels too high for a small team, and migration effort discourages switching.",
+      "interpretation": "Adoption friction may arise from organizational approval, affordability, or transition effort rather than one universal barrier, so these constraints should not be treated as interchangeable.",
+      "potential_opportunity": "A potential direction is to validate which barrier recurs in the target segment before prioritizing a product or communication response.",
+      "evidence_ids": [
+        "gf-003",
+        "gf-004",
+        "gf-013"
+      ],
+      "confidence": "medium",
+      "review_status": "preliminary",
+      "draft_label": "AI generated draft"
+    },
+    {
+      "insight_id": "insight-2a393fe610",
+      "theme_id": "theme-2a393fe610",
+      "observation": "Evidence asks about invoice export and identity-provider integration and separately requests support for assigning a task to two owners.",
+      "interpretation": "Evaluation and continued use may depend on whether the offering fits existing finance, identity, and collaboration workflows, although each capability is represented by only one record.",
+      "potential_opportunity": "A potential next step is to test the frequency and decision importance of these workflow requirements with additional users.",
+      "evidence_ids": [
+        "gf-002",
+        "gf-010",
+        "gf-011"
+      ],
+      "confidence": "medium",
+      "review_status": "preliminary",
+      "draft_label": "AI generated draft"
+    },
+    {
+      "insight_id": "insight-ec66e6c836",
+      "theme_id": "theme-ec66e6c836",
+      "observation": "A missing verification email, repeated import failures with an unclear error, and billing during a paused period all leave the user without an adequate recovery path; the billing case ended in cancellation.",
+      "interpretation": "Operational failures may become more damaging when guidance or support does not help users recover, but the available evidence does not establish how often these failures occur.",
+      "potential_opportunity": "A potential direction is to validate the most common recovery breakdown before changing support or product flows.",
+      "evidence_ids": [
+        "gf-008",
+        "gf-012",
+        "gf-015"
+      ],
+      "confidence": "medium",
+      "review_status": "preliminary",
+      "draft_label": "AI generated draft"
+    },
+    {
+      "insight_id": "insight-971126ca26",
+      "theme_id": "theme-971126ca26",
+      "observation": "One team is worried about customer-data storage, while another record says audit history makes the process feel trustworthy.",
+      "interpretation": "Governance information may influence trust in both directions: missing data-residency clarity can create concern, while visible auditability can provide reassurance.",
+      "potential_opportunity": "A potential next step is to validate which governance information users need during evaluation and whether current materials make it accessible.",
+      "evidence_ids": [
+        "gf-006",
+        "gf-014"
+      ],
+      "confidence": "low",
+      "review_status": "preliminary",
+      "draft_label": "AI generated draft"
+    }
+  ]
+}

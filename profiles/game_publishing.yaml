@@ -1,0 +1,28 @@
+{
+  "profile_id": "game_publishing",
+  "profile_name": "Game Publishing Research",
+  "research_goal": "Understand player discussion, publishing risks, localization feedback, content expectations, and overseas communication opportunities.",
+  "research_questions": ["What do players discuss most?", "What do players praise?", "What are the main complaints or questions?", "Is there localization, translation, voice, or cultural feedback?", "Are there monetization concerns?", "Which characters, stories, or gameplay elements matter?", "What version content do players expect?", "Which issues may affect overseas publishing or content reach?", "Do official messages and player discussion differ?"],
+  "primary_categories": ["Game / Content Praise", "Gameplay Feedback", "Character & Story", "Localization Feedback", "Monetization Concern", "Technical Issue", "Version Expectation", "Community / Social", "Feature Request", "Other"],
+  "category_definitions": {
+    "Game / Content Praise": "Positive reaction to the game, update, trailer, or playable content.",
+    "Gameplay Feedback": "Feedback on mechanics, balance, controls, difficulty, or play experience.",
+    "Character & Story": "Discussion of characters, narrative, lore, worldbuilding, or plot.",
+    "Localization Feedback": "Explicit feedback on translation, dubbing, subtitles, terminology, or cultural expression.",
+    "Monetization Concern": "Concern about price, gacha, bundles, subscriptions, paywalls, or value-for-money mechanics.",
+    "Technical Issue": "Bug, crash, performance, compatibility, connection, or installation problem.",
+    "Version Expectation": "Expectation or question about release, platform, region, update, or future version content.",
+    "Community / Social": "Community behaviour, multiplayer social interaction, creators, or player-to-player discussion.",
+    "Feature Request": "Explicit request for a game, platform, accessibility, or content feature.",
+    "Other": "Content outside the game-publishing taxonomy."
+  },
+  "secondary_category_guidance": "Keep player facts separate from researcher interpretation; secondary labels require direct textual support.",
+  "subject_options": ["game", "content", "publisher", "creator_or_video", "community", "unrelated", "unclear"],
+  "subtopic_guidance": ["gameplay", "balance", "controls", "difficulty", "character", "story", "translation", "dubbing", "subtitles", "culture", "monetization", "performance", "bugs", "platform", "region", "release timing", "community"],
+  "stage_options": ["Unknown", "Pre-launch", "Considering", "Playing", "Returning", "Churned", "Waiting for Update"],
+  "review_guidance": "Do not infer publishing impact from price words or localization failure from translation words; preserve fact versus interpretation.",
+  "insight_questions": ["Which player priorities recur across videos?", "Which verified issues may affect overseas publishing?", "Where do official communication and player discussion diverge?"],
+  "report_sections": ["Research Setup", "Review Workload", "Confirmed Findings", "Preliminary Insights", "Insight Review Queue"],
+  "rubric_version": "phase2b-lite-game-publishing-v1",
+  "qa_sampling": {"low": 0.10, "medium": 0.25}
+}

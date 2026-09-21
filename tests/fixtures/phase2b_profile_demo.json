@@ -1,0 +1,41 @@
+{
+  "comment_id": "profile-demo-001",
+  "comment_text": "I love the new update, but the translation needs work.",
+  "demonstrations": {
+    "consumer_product": {
+      "subject": "product",
+      "primary_category": "Product Praise",
+      "secondary_categories": ["Product Concern"],
+      "stage": "Using",
+      "research_question": "What do users praise or worry about?"
+    },
+    "game_publishing": {
+      "subject": "game",
+      "primary_category": "Localization Feedback",
+      "secondary_categories": ["Game / Content Praise"],
+      "stage": "Playing",
+      "research_question": "Is there localization, translation, voice, or cultural feedback?"
+    },
+    "gtm_research": {
+      "subject": "product",
+      "primary_category": "User Experience Issue",
+      "secondary_categories": ["Product Value"],
+      "stage": "Using",
+      "research_question": "Are there message-market-fit gaps?"
+    },
+    "overseas_content": {
+      "subject": "content",
+      "primary_category": "Localization / Cultural Feedback",
+      "secondary_categories": ["Positive Content Reaction"],
+      "stage": "Engaged",
+      "research_question": "Is there cultural, localization, or expression feedback?"
+    },
+    "general_feedback": {
+      "subject": "offering",
+      "primary_category": "Pain Point",
+      "secondary_categories": ["Positive Signal / Praise"],
+      "stage": "Using",
+      "research_question": "Which pain points coexist with positive signals?"
+    }
+  }
+}

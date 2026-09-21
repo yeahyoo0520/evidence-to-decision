@@ -1,0 +1,89 @@
+{
+  "profile_id": "general_feedback",
+  "profile_name": "General Feedback Research",
+  "research_goal": "Understand needs, positive signals, pain points, questions, adoption barriers, trust concerns, usage contexts, comparisons, and service issues across mixed feedback sources.",
+  "research_questions": [
+    "What needs and requests recur across the evidence?",
+    "Which pain points or barriers may affect adoption?",
+    "What creates trust, uncertainty, praise, or service demand?",
+    "In which contexts do people use or evaluate the offering?"
+  ],
+  "primary_categories": [
+    "Need / Request",
+    "Pain Point",
+    "Positive Signal / Praise",
+    "Question / Information Need",
+    "Adoption or Purchase Barrier",
+    "Trust / Risk Concern",
+    "Comparison / Alternative",
+    "Usage Context",
+    "Support / Service Issue",
+    "Other / Unclear"
+  ],
+  "category_definitions": {
+    "Need / Request": "An explicit desired capability, improvement, option, or change.",
+    "Pain Point": "A problem, frustration, limitation, or negative experience with an offering or process.",
+    "Positive Signal / Praise": "Positive experience, satisfaction, recommendation, or evidence of perceived value.",
+    "Question / Information Need": "A request for factual clarification, instructions, availability, compatibility, or other information.",
+    "Adoption or Purchase Barrier": "A condition such as price, access, fit, approval, switching cost, or uncertainty that blocks adoption or purchase.",
+    "Trust / Risk Concern": "Concern about reliability, privacy, safety, credibility, compliance, or other perceived risk.",
+    "Comparison / Alternative": "An explicit evaluation against another option, workaround, incumbent, or alternative.",
+    "Usage Context": "A concrete situation, workflow, environment, role, or job in which the offering is used or considered.",
+    "Support / Service Issue": "A request or complaint involving support, delivery, returns, billing, account handling, or service recovery.",
+    "Other / Unclear": "Evidence whose main intent is outside this taxonomy or cannot be determined reliably."
+  },
+  "secondary_category_guidance": "Use secondary categories only when a distinct additional intent is directly supported by the evidence. Do not infer business impact that the source did not express.",
+  "subject_options": [
+    "offering",
+    "brand_or_organization",
+    "support_or_staff",
+    "policy_or_process",
+    "communication_or_content",
+    "alternative",
+    "unrelated",
+    "unclear"
+  ],
+  "subtopic_guidance": [
+    "features",
+    "usability",
+    "quality",
+    "reliability",
+    "price",
+    "availability",
+    "compatibility",
+    "privacy",
+    "safety",
+    "delivery",
+    "billing",
+    "returns",
+    "support responsiveness",
+    "workflow",
+    "onboarding"
+  ],
+  "stage_options": [
+    "Unknown",
+    "Discovering",
+    "Considering",
+    "Evaluating",
+    "Adopting",
+    "Using",
+    "Blocked",
+    "Churned",
+    "Seeking Support"
+  ],
+  "review_guidance": "Keep source facts separate from interpretation. Review mixed subjects, close competing intents, implicit risk claims, and evidence proposed for formal conclusions.",
+  "insight_questions": [
+    "Which needs, pain points, and positive signals recur across sources?",
+    "Which barriers or risks are well supported by evidence?",
+    "Which questions or service issues reveal an information gap?"
+  ],
+  "report_sections": [
+    "Research Setup",
+    "Review Workload",
+    "Confirmed Findings",
+    "Preliminary Insights",
+    "Insight Review Queue"
+  ],
+  "rubric_version": "core-generalization-general-feedback-v1",
+  "qa_sampling": {"low": 0.10, "medium": 0.25}
+}

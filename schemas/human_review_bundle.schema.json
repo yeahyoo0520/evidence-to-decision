@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "human_review_bundle.schema.json",
+  "title": "Human Review audit bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "bundle_version",
+    "profile_id",
+    "source_bundle_sha256",
+    "generated_at",
+    "source_bundle",
+    "review_items",
+    "review_decisions",
+    "confirmed_insights",
+    "rejected_review_ids",
+    "pending_review_ids"
+  ],
+  "properties": {
+    "bundle_version": {"const": "phase3-lite-2-v1"},
+    "profile_id": {"type": "string", "minLength": 1},
+    "source_bundle_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "generated_at": {"type": "string", "minLength": 1},
+    "source_bundle": {"$ref": "theme_insight_bundle.schema.json"},
+    "review_items": {
+      "type": "array",
+      "items": {"$ref": "human_review_packet.schema.json#/$defs/review_item"}
+    },
+    "review_decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "review_id",
+          "source_theme_id",
+          "source_insight_id",
+          "action",
+          "review_status",
+          "reviewer_note",
+          "rejection_reason",
+          "reviewed_at"
+        ],
+        "properties": {
+          "review_id": {"type": "string", "minLength": 1},
+          "source_theme_id": {"type": "string", "minLength": 1},
+          "source_insight_id": {"type": "string", "minLength": 1},
+          "action": {"enum": ["confirm", "edit", "reject"]},
+          "review_status": {"enum": ["human_confirmed", "human_edited", "rejected"]},
+          "reviewer_note": {"type": "string"},
+          "rejection_reason": {"type": "string"},
+          "reviewed_at": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "confirmed_insights": {
+      "type": "array",
+      "items": {"$ref": "confirmed_insight.schema.json"}
+    },
+    "rejected_review_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "pending_review_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    }
+  }
+}

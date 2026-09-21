@@ -1,0 +1,28 @@
+{
+  "profile_id": "overseas_content",
+  "profile_name": "Overseas Content Research",
+  "research_goal": "Understand overseas audience reactions, information gaps, content requests, cultural feedback, and future content opportunities.",
+  "research_questions": ["How do users react to the content?", "Which content prompts deeper discussion?", "Which information needs remain unanswered?", "What content do users want next?", "How do official and creator discussions differ?", "Which questions can become future content topics?", "Is there cultural, localization, or expression feedback?"],
+  "primary_categories": ["Positive Content Reaction", "Negative Content Reaction", "Information Need", "Content Request", "Usage / Audience Context", "Comparison", "Creator / Video Feedback", "Brand / Product Discussion", "Localization / Cultural Feedback", "Other"],
+  "category_definitions": {
+    "Positive Content Reaction": "Positive reaction to the content, message, or presentation.",
+    "Negative Content Reaction": "Negative reaction, criticism, or dissatisfaction with the content or message.",
+    "Information Need": "A question or missing information the audience wants answered.",
+    "Content Request": "A request for a future topic, format, demonstration, or follow-up.",
+    "Usage / Audience Context": "Audience context, situation, identity-as-viewer, or use context explicitly stated without sensitive inference.",
+    "Comparison": "An explicit comparison between content, creators, messages, brands, or products.",
+    "Creator / Video Feedback": "Feedback about creator performance, structure, pacing, filming, or editing.",
+    "Brand / Product Discussion": "Discussion centered on the brand or product rather than the content itself.",
+    "Localization / Cultural Feedback": "Explicit feedback about language, translation, cultural expression, or regional framing.",
+    "Other": "Content outside the overseas-content taxonomy."
+  },
+  "secondary_category_guidance": "Separate content reaction, creator feedback, product discussion, and cultural feedback when multiple are explicit.",
+  "subject_options": ["content", "creator_or_video", "brand", "product", "audience", "unrelated", "unclear"],
+  "subtopic_guidance": ["topic relevance", "information gap", "format", "pacing", "presentation", "filming", "editing", "language", "translation", "culture", "region", "audience context", "brand", "product"],
+  "stage_options": ["Unknown", "First-time Viewer", "Returning Viewer", "Subscriber", "Considering", "Engaged"],
+  "review_guidance": "Do not infer culture, audience identity, or market impact beyond explicit comment evidence.",
+  "insight_questions": ["Which content themes drive meaningful discussion?", "Which verified information gaps can become content opportunities?", "Where does localization or cultural framing need confirmation?"],
+  "report_sections": ["Research Setup", "Review Workload", "Confirmed Findings", "Preliminary Insights", "Insight Review Queue"],
+  "rubric_version": "phase2b-lite-overseas-content-v1",
+  "qa_sampling": {"low": 0.10, "medium": 0.25}
+}

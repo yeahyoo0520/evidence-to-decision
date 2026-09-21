@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "insight.schema.json",
+  "title": "Traceable research insight",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["insight_id", "profile_id", "theme", "theme_description", "evidence_count", "evidence_comment_ids", "representative_comment_ids", "source_video_ids", "source_count", "insight", "action_opportunity", "priority", "priority_reason", "confidence_level", "status", "evidence_review_status", "needs_human_confirmation", "created_at", "rubric_version"],
+  "properties": {
+    "insight_id": {"type": "string", "minLength": 1},
+    "profile_id": {"type": "string", "minLength": 1},
+    "theme": {"type": "string", "minLength": 1},
+    "theme_description": {"type": "string", "minLength": 1},
+    "evidence_count": {"type": "integer", "minimum": 1},
+    "evidence_comment_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "representative_comment_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "source_video_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "source_count": {"type": "integer", "minimum": 1},
+    "insight": {"type": "string", "minLength": 1},
+    "action_opportunity": {"type": "string", "minLength": 1},
+    "priority": {"enum": ["P0", "P1", "P2"]},
+    "priority_reason": {"type": "string", "minLength": 1},
+    "confidence_level": {"enum": ["low", "medium", "high"]},
+    "status": {"enum": ["preliminary", "confirmed", "rejected"]},
+    "evidence_review_status": {"enum": ["not_required", "pending", "confirmed", "rejected"]},
+    "needs_human_confirmation": {"type": "boolean"},
+    "created_at": {"type": "string", "minLength": 1},
+    "rubric_version": {"type": "string", "minLength": 1}
+  }
+}

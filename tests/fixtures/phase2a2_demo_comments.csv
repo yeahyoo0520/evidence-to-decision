@@ -1,0 +1,7 @@
+project_id,comment_id,comment_text,video_id,video_title,channel_title,is_reply,parent_comment_id,comment_like_count,reply_count,collection_order,human_confirmed_primary_category,human_confirmed_secondary_categories,human_confirmed_subtopics,human_confirmed_lifecycle_stage,review_status,reviewed_at,reviewer_note
+phase2a2-offline-demo,demo-001,I love these headphones.,demo-video,Offline fixture video,Fixture channel,false,,18,0,1,,,,,,,
+phase2a2-offline-demo,demo-002,Can you talk on them during a call?,demo-video,Offline fixture video,Fixture channel,false,,11,0,2,,,,,,,
+phase2a2-offline-demo,demo-003,Great camera work and editing.,demo-video,Offline fixture video,Fixture channel,false,,7,0,3,Other,,,,confirmed,2026-07-27T00:00:00Z,Confirmed as praise for the video production rather than the product.
+phase2a2-offline-demo,demo-004,OpenRun Pro is better than AirPods for running.,demo-video,Offline fixture video,Fixture channel,false,,24,0,4,,,,,,,
+phase2a2-offline-demo,demo-005,I wish it came in olive green.,demo-video,Offline fixture video,Fixture channel,false,,9,0,5,,,,,,,
+phase2a2-offline-demo,demo-006,I bought OpenFit last month and like the sound but it falls off when I move.,demo-video,Offline fixture video,Fixture channel,false,,13,0,6,,,,,,,

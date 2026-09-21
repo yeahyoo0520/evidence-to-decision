@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "comment_classification.schema.json",
+  "title": "Codex-assisted evidence classification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "comment_id",
+    "subject",
+    "primary_category",
+    "secondary_categories",
+    "subtopics",
+    "lifecycle_stage",
+    "mentioned_brands",
+    "mentioned_products",
+    "confidence",
+    "evidence",
+    "review_risk",
+    "review_triggers",
+    "manual_review",
+    "review_reason",
+    "classification_source",
+    "classifier_version",
+    "rubric_version"
+  ],
+  "properties": {
+    "comment_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable evidence ID; retained as comment_id for backward compatibility."
+    },
+    "subject": {
+      "type": "string",
+      "minLength": 1
+    },
+    "primary_category": {
+      "type": "string",
+      "minLength": 1
+    },
+    "secondary_categories": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "subtopics": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "lifecycle_stage": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mentioned_brands": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "mentioned_products": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "evidence": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    },
+    "review_risk": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "review_triggers": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1, "maxLength": 120}
+    },
+    "manual_review": {"type": "boolean"},
+    "review_reason": {"type": "string"},
+    "classification_source": {"const": "codex-assisted"},
+    "classifier_version": {"type": "string", "minLength": 1},
+    "rubric_version": {"type": "string", "minLength": 1}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"manual_review": {"const": true}},
+        "required": ["manual_review"]
+      },
+      "then": {
+        "properties": {"review_reason": {"minLength": 1}}
+      }
+    },
+    {
+      "if": {
+        "properties": {"review_risk": {"enum": ["medium", "high"]}},
+        "required": ["review_risk"]
+      },
+      "then": {
+        "properties": {"review_triggers": {"minItems": 1}}
+      }
+    },
+    {
+      "if": {
+        "properties": {"review_risk": {"const": "high"}},
+        "required": ["review_risk"]
+      },
+      "then": {
+        "properties": {"manual_review": {"const": true}}
+      }
+    }
+  ]
+}

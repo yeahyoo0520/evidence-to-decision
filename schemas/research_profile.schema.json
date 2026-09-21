@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "research_profile.schema.json",
+  "title": "Research profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["profile_id", "profile_name", "research_goal", "research_questions", "primary_categories", "category_definitions", "secondary_category_guidance", "subject_options", "subtopic_guidance", "stage_options", "review_guidance", "insight_questions", "report_sections", "rubric_version"],
+  "properties": {
+    "profile_id": {"type": "string", "minLength": 1},
+    "profile_name": {"type": "string", "minLength": 1},
+    "research_goal": {"type": "string", "minLength": 1},
+    "research_questions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "primary_categories": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "category_definitions": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string", "minLength": 1}},
+    "secondary_category_guidance": {"type": "string", "minLength": 1},
+    "subject_options": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "subtopic_guidance": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "stage_options": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "review_guidance": {"type": "string", "minLength": 1},
+    "insight_questions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "report_sections": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "rubric_version": {"type": "string", "minLength": 1},
+    "qa_sampling": {"type": "object", "additionalProperties": false, "properties": {"low": {"type": "number", "minimum": 0, "maximum": 1}, "medium": {"type": "number", "minimum": 0, "maximum": 1}}}
+  }
+}

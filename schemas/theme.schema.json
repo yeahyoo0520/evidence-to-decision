@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "theme.schema.json",
+  "title": "Evidence-linked preliminary theme",
+  "type": "object",
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {"discovery_method": {"const": "llm_inductive"}},
+        "required": ["discovery_method"]
+      },
+      "then": {
+        "required": ["taxonomy_coverage", "coverage_reason"]
+      }
+    }
+  ],
+  "required": [
+    "theme_id",
+    "theme_name",
+    "theme_description",
+    "related_categories",
+    "evidence_count",
+    "evidence_comment_ids",
+    "representative_comments",
+    "confidence",
+    "review_status"
+  ],
+  "properties": {
+    "theme_id": {"type": "string", "minLength": 1},
+    "theme_name": {"type": "string", "minLength": 1},
+    "theme_description": {"type": "string", "minLength": 1},
+    "related_categories": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "evidence_count": {"type": "integer", "minimum": 1},
+    "evidence_comment_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "representative_comments": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "representative_evidence_ids": {
+      "type": "array",
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "discovery_method": {"enum": ["taxonomy_based", "llm_inductive"]},
+    "taxonomy_coverage": {"enum": ["covered", "partially_covered", "emergent"]},
+    "coverage_reason": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Preliminary explanation grounded in Theme meaning, evidence comments, relevant categories, and taxonomy definitions. covered means the taxonomy substantially expresses the core meaning; partially_covered means material extra meaning remains; emergent means the core user issue is clearly outside the taxonomy."
+    },
+    "confidence": {"enum": ["low", "medium", "high"]},
+    "review_status": {"const": "preliminary"}
+  }
+}

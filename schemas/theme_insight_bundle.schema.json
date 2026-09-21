@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "theme_insight_bundle.schema.json",
+  "title": "Theme discovery and insight draft bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "profile_id",
+    "generation_method",
+    "draft_label",
+    "generated_at",
+    "source_comment_count",
+    "themes",
+    "insight_drafts"
+  ],
+  "properties": {
+    "profile_id": {"type": "string", "minLength": 1},
+    "generation_method": {
+      "enum": [
+        "classification-semantic-aggregation-v1",
+        "llm-inductive-two-stage-v1"
+      ]
+    },
+    "draft_label": {"const": "AI generated draft"},
+    "generated_at": {"type": "string", "minLength": 1},
+    "source_comment_count": {"type": "integer", "minimum": 0},
+    "research_context": {"$ref": "research_context.schema.json"},
+    "themes": {
+      "type": "array",
+      "items": {"$ref": "theme.schema.json"}
+    },
+    "insight_drafts": {
+      "type": "array",
+      "items": {"$ref": "insight_draft.schema.json"}
+    }
+  }
+}

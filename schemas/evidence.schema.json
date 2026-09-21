@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evidence.schema.json",
+  "title": "Generic Evidence Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["evidence_id", "text", "source_type"],
+  "properties": {
+    "evidence_id": {"type": "string", "minLength": 1},
+    "text": {"type": "string", "minLength": 1},
+    "source_type": {
+      "enum": ["youtube_comment", "product_review", "customer_inquiry", "crm_note", "sales_note", "survey_response", "interview_note", "social_feedback"]
+    },
+    "source_name": {"type": ["string", "null"]},
+    "created_at": {"type": ["string", "null"], "format": "date-time"},
+    "timestamp": {"type": ["string", "null"], "format": "date-time"},
+    "language": {"type": ["string", "null"]},
+    "market": {"type": ["string", "null"]},
+    "region": {"type": ["string", "null"]},
+    "metadata": {"type": "object"}
+  }
+}

@@ -1,0 +1,301 @@
+[
+  {
+    "decision_brief_id": "decision-b7ec86e4bb59",
+    "source_effective_insight_ids": [
+      "effective-ac402bfd5ade"
+    ],
+    "source_theme_ids": [
+      "theme-c5850e4cfd"
+    ],
+    "supporting_evidence_ids": [
+      "gf-001",
+      "gf-005",
+      "gf-007",
+      "gf-009"
+    ],
+    "research_question": "What helps or hinders successful adoption across the supplied feedback sources?",
+    "decision_context": "Decide which adoption friction or value signal should be validated before prioritizing the next product or communication improvement.",
+    "analysis_mode": "decision_focused",
+    "why_it_matters": "If speed and mobile workflow fit consistently shape perceived value, they may influence how quickly people understand where the offering fits into day-to-day work.",
+    "decision_question": "Which speed or mobile-workflow benefit, if any, should be emphasized when helping prospective users evaluate adoption?",
+    "possible_directions": [
+      {
+        "direction": "Test messaging that demonstrates fast setup and time saved in concrete workflows.",
+        "rationale": "The cited feedback connects value to quick setup and reduced recurring effort.",
+        "evidence_basis": "Evidence gf-001 and gf-007 describe ten-minute setup and hours saved versus a spreadsheet.",
+        "tradeoff_or_risk": "A speed-led message may not generalize beyond the workflows represented in this small sample."
+      },
+      {
+        "direction": "Explore whether mobile, in-context use deserves separate positioning.",
+        "rationale": "Two records describe phone performance or warehouse-floor use rather than desktop efficiency.",
+        "evidence_basis": "Evidence gf-005 and gf-009 refer to mobile loading and inventory work on the warehouse floor.",
+        "tradeoff_or_risk": "Separating the message could add complexity if mobile use is uncommon in the target audience."
+      }
+    ],
+    "evidence_gaps": [
+      {
+        "gap": "The evidence does not show which of setup speed, time savings, or mobile access matters most to the intended audience.",
+        "why_it_matters": "The decision question requires prioritizing among distinct value signals.",
+        "related_insight_ids": [
+          "effective-ac402bfd5ade"
+        ],
+        "related_evidence_ids": [
+          "gf-001",
+          "gf-005",
+          "gf-007",
+          "gf-009"
+        ]
+      }
+    ],
+    "validation_plan": [
+      {
+        "validation_question": "Which value signal is understood and considered relevant by the intended adoption audience?",
+        "method": "Message test followed by short qualitative interviews",
+        "required_evidence": "Responses to separate setup-speed, time-saving, and mobile-workflow messages, with reasons for perceived relevance.",
+        "evaluation_criterion": "Whether one signal is repeatedly understood as relevant across additional participants without creating material confusion.",
+        "limitation": "Stated message preference will not by itself establish adoption behavior."
+      }
+    ],
+    "verification_statuses": [
+      "unreviewed"
+    ],
+    "review_recommended": false,
+    "review_reasons": [],
+    "uncertainty_note": "The brief is based on four qualitative records from different contexts and does not establish prevalence or causal impact on adoption.",
+    "status": "AI-generated decision support",
+    "generated_at": "2026-09-11T13:31:46.255637+00:00"
+  },
+  {
+    "decision_brief_id": "decision-d6b4aa556d3b",
+    "source_effective_insight_ids": [
+      "effective-41f2373fae30"
+    ],
+    "source_theme_ids": [
+      "theme-c65fcd309c"
+    ],
+    "supporting_evidence_ids": [
+      "gf-003",
+      "gf-004",
+      "gf-013"
+    ],
+    "research_question": "What helps or hinders successful adoption across the supplied feedback sources?",
+    "decision_context": "Decide which adoption friction or value signal should be validated before prioritizing the next product or communication improvement.",
+    "analysis_mode": "decision_focused",
+    "why_it_matters": "Security approval, affordability, and migration effort can stop evaluation for different reasons, so treating them as one generic objection could lead to an ill-targeted response.",
+    "decision_question": "Which adoption constraint is both material in the target segment and feasible for the team to address or clarify?",
+    "possible_directions": [
+      {
+        "direction": "Separate approval, pricing, and migration questions in follow-up research rather than presenting one combined barrier.",
+        "rationale": "Each cited record names a different constraint with a different likely owner and remedy.",
+        "evidence_basis": "Evidence gf-003 concerns security approval, gf-004 concerns small-team pricing, and gf-013 concerns migration effort.",
+        "tradeoff_or_risk": "A more segmented study requires enough observations in each target segment to avoid overinterpreting single cases."
+      }
+    ],
+    "evidence_gaps": [
+      {
+        "gap": "No segment-level frequency or outcome data shows how often each constraint stops adoption.",
+        "why_it_matters": "Priority cannot be inferred from three qualitatively different cases.",
+        "related_insight_ids": [
+          "effective-41f2373fae30"
+        ],
+        "related_evidence_ids": [
+          "gf-003",
+          "gf-004",
+          "gf-013"
+        ]
+      }
+    ],
+    "validation_plan": [
+      {
+        "validation_question": "How frequently does each constraint appear, for whom, and at what point in evaluation?",
+        "method": "Segmented survey plus review of available loss or stalled-evaluation reasons",
+        "required_evidence": "Comparable records for security approval, price, and migration effort, linked to segment and evaluation outcome where available.",
+        "evaluation_criterion": "Whether a constraint recurs within a defined segment and is consistently associated with delayed or abandoned adoption.",
+        "limitation": "Observed associations may reflect other unmeasured differences between segments."
+      }
+    ],
+    "verification_statuses": [
+      "unreviewed"
+    ],
+    "review_recommended": false,
+    "review_reasons": [],
+    "uncertainty_note": "Each barrier is represented by one record; the evidence identifies plausible constraints but cannot rank their prevalence or business impact.",
+    "status": "AI-generated decision support",
+    "generated_at": "2026-09-11T13:31:46.255637+00:00"
+  },
+  {
+    "decision_brief_id": "decision-6631c262c738",
+    "source_effective_insight_ids": [
+      "effective-012765cabda9"
+    ],
+    "source_theme_ids": [
+      "theme-2a393fe610"
+    ],
+    "supporting_evidence_ids": [
+      "gf-002",
+      "gf-010",
+      "gf-011"
+    ],
+    "research_question": "What helps or hinders successful adoption across the supplied feedback sources?",
+    "decision_context": "Decide which adoption friction or value signal should be validated before prioritizing the next product or communication improvement.",
+    "analysis_mode": "decision_focused",
+    "why_it_matters": "Workflow compatibility questions can prolong evaluation or limit continued use when teams cannot confirm that the offering fits their finance, identity, or collaboration processes.",
+    "decision_question": "Which workflow capability question should be validated first as a recurring requirement rather than a one-off request?",
+    "possible_directions": [
+      {
+        "direction": "Collect structured follow-up evidence on invoice export, identity integration, and shared task ownership.",
+        "rationale": "The current records reveal concrete needs but do not show recurrence.",
+        "evidence_basis": "Evidence gf-002, gf-010, and gf-011 each names one distinct workflow capability.",
+        "tradeoff_or_risk": "A predefined capability list may miss other workflow requirements unless open-ended feedback remains available."
+      }
+    ],
+    "evidence_gaps": [
+      {
+        "gap": "The evidence contains one record per capability and no information about decision importance or existing workarounds.",
+        "why_it_matters": "A capability should not be prioritized solely because it appears once in a diverse sample.",
+        "related_insight_ids": [
+          "effective-012765cabda9"
+        ],
+        "related_evidence_ids": [
+          "gf-002",
+          "gf-010",
+          "gf-011"
+        ]
+      }
+    ],
+    "validation_plan": [
+      {
+        "validation_question": "Which capability recurs and materially affects evaluation or use?",
+        "method": "Customer interviews and structured feedback collection",
+        "required_evidence": "Additional capability requests with role, workflow, current workaround, and consequence of the missing capability.",
+        "evaluation_criterion": "Whether the same requirement recurs across relevant roles and is described as consequential rather than merely desirable.",
+        "limitation": "Interview samples may overrepresent users willing to discuss unmet needs."
+      }
+    ],
+    "verification_statuses": [
+      "unreviewed"
+    ],
+    "review_recommended": false,
+    "review_reasons": [],
+    "uncertainty_note": "The current evidence establishes that three workflow needs exist, but not their frequency, priority, or technical feasibility.",
+    "status": "AI-generated decision support",
+    "generated_at": "2026-09-11T13:31:46.255637+00:00"
+  },
+  {
+    "decision_brief_id": "decision-8e9fd533c9d1",
+    "source_effective_insight_ids": [
+      "effective-7e6111233f11"
+    ],
+    "source_theme_ids": [
+      "theme-ec66e6c836"
+    ],
+    "supporting_evidence_ids": [
+      "gf-008",
+      "gf-012",
+      "gf-015"
+    ],
+    "research_question": "What helps or hinders successful adoption across the supplied feedback sources?",
+    "decision_context": "Decide which adoption friction or value signal should be validated before prioritizing the next product or communication improvement.",
+    "analysis_mode": "decision_focused",
+    "why_it_matters": "When a workflow fails and recovery information or support is inadequate, the original issue can become prolonged friction; one cited billing case ended in cancellation.",
+    "decision_question": "Which recovery breakdown should be investigated first to understand whether it creates avoidable user loss or support demand?",
+    "possible_directions": [
+      {
+        "direction": "Map the recovery path for verification, import, and billing failures before choosing a change.",
+        "rationale": "The records describe different failures but share an inability to recover confidently.",
+        "evidence_basis": "Evidence gf-008 lacks email and support response, gf-012 lacks actionable error guidance, and gf-015 reports billing after a pause.",
+        "tradeoff_or_risk": "Combining distinct operational flows in one investigation could obscure flow-specific causes."
+      }
+    ],
+    "evidence_gaps": [
+      {
+        "gap": "There is no incident frequency, resolution-time, support-volume, or outcome data for the three recovery failures.",
+        "why_it_matters": "The evidence cannot show which breakdown is most common or most consequential.",
+        "related_insight_ids": [
+          "effective-7e6111233f11"
+        ],
+        "related_evidence_ids": [
+          "gf-008",
+          "gf-012",
+          "gf-015"
+        ]
+      }
+    ],
+    "validation_plan": [
+      {
+        "validation_question": "Where do users fail to recover, and what outcome follows?",
+        "method": "Qualitative recovery-path review combined with available support and product-event data",
+        "required_evidence": "Additional cases with failure type, attempted recovery, response time, resolution, and subsequent use or cancellation.",
+        "evaluation_criterion": "Whether a repeatable recovery break appears across cases and aligns with unresolved support demand or abandonment.",
+        "limitation": "Historical event and support records may be incomplete or difficult to link at the individual level."
+      }
+    ],
+    "verification_statuses": [
+      "unreviewed"
+    ],
+    "review_recommended": false,
+    "review_reasons": [],
+    "uncertainty_note": "Three cases show credible recovery problems, but only one explicitly reports cancellation and none establishes system-wide frequency.",
+    "status": "AI-generated decision support",
+    "generated_at": "2026-09-11T13:31:46.255637+00:00"
+  },
+  {
+    "decision_brief_id": "decision-eca9d17a2ac0",
+    "source_effective_insight_ids": [
+      "effective-02de7920e9de"
+    ],
+    "source_theme_ids": [
+      "theme-971126ca26"
+    ],
+    "supporting_evidence_ids": [
+      "gf-006",
+      "gf-014"
+    ],
+    "research_question": "What helps or hinders successful adoption across the supplied feedback sources?",
+    "decision_context": "Decide which adoption friction or value signal should be validated before prioritizing the next product or communication improvement.",
+    "analysis_mode": "decision_focused",
+    "why_it_matters": "Governance information may shape whether evaluators feel confident proceeding: unclear data residency creates concern, while audit history can provide reassurance.",
+    "decision_question": "Should governance information be made easier to find during evaluation, and which information do evaluators actually need?",
+    "possible_directions": [
+      {
+        "direction": "Test a clearer evaluation-stage explanation of data residency and audit history.",
+        "rationale": "The two records show opposite trust responses tied to governance information.",
+        "evidence_basis": "Evidence gf-006 expresses concern about storage location; gf-014 says audit history feels trustworthy.",
+        "tradeoff_or_risk": "Additional governance detail may increase information density and may not answer every market-specific requirement."
+      }
+    ],
+    "evidence_gaps": [
+      {
+        "gap": "The two records do not show whether data residency and auditability matter to the same evaluator segments or affect progression.",
+        "why_it_matters": "The proposed information change depends on both relevance and timing during evaluation.",
+        "related_insight_ids": [
+          "effective-02de7920e9de"
+        ],
+        "related_evidence_ids": [
+          "gf-006",
+          "gf-014"
+        ]
+      }
+    ],
+    "validation_plan": [
+      {
+        "validation_question": "Which governance questions recur during evaluation, and does clearer information resolve uncertainty?",
+        "method": "Evaluator interviews followed by a content comprehension test",
+        "required_evidence": "Additional governance questions, the evaluator context, and reactions to a clearer information treatment.",
+        "evaluation_criterion": "Whether the same questions recur and participants can locate and correctly understand the relevant information.",
+        "limitation": "Improved comprehension would not by itself prove an effect on adoption."
+      }
+    ],
+    "verification_statuses": [
+      "unreviewed"
+    ],
+    "review_recommended": true,
+    "review_reasons": [
+      "Low confidence",
+      "Only 2 supporting evidence items"
+    ],
+    "uncertainty_note": "This brief rests on two unreviewed records and is flagged for review because confidence is low and evidence is limited.",
+    "status": "AI-generated decision support",
+    "generated_at": "2026-09-11T13:31:46.255637+00:00"
+  }
+]

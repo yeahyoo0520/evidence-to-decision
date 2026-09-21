@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "confirmed_insight.schema.json",
+  "title": "Human-confirmed or human-edited insight",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "confirmed_insight_id",
+    "source_theme_id",
+    "source_insight_id",
+    "review_id",
+    "review_action",
+    "theme_name",
+    "theme_description",
+    "observation",
+    "interpretation",
+    "evidence_ids",
+    "representative_evidence_ids",
+    "discovery_method",
+    "taxonomy_coverage",
+    "coverage_reason",
+    "reviewer_note",
+    "reviewed_at",
+    "status"
+  ],
+  "properties": {
+    "confirmed_insight_id": {"type": "string", "minLength": 1},
+    "source_theme_id": {"type": "string", "minLength": 1},
+    "source_insight_id": {"type": "string", "minLength": 1},
+    "review_id": {"type": "string", "minLength": 1},
+    "review_action": {"enum": ["confirm", "edit"]},
+    "theme_name": {"type": "string", "minLength": 1},
+    "theme_description": {"type": "string", "minLength": 1},
+    "observation": {"type": "string", "minLength": 1},
+    "interpretation": {"type": "string", "minLength": 1},
+    "evidence_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "representative_evidence_ids": {
+      "type": "array",
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "discovery_method": {"enum": ["taxonomy_based", "llm_inductive"]},
+    "taxonomy_coverage": {"enum": ["covered", "partially_covered", "emergent"]},
+    "coverage_reason": {"type": "string", "minLength": 1},
+    "reviewer_note": {"type": "string"},
+    "reviewed_at": {"type": "string", "minLength": 1},
+    "status": {"enum": ["human_confirmed", "human_edited"]}
+  }
+}

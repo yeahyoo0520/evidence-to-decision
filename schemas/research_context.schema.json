@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "research_context.schema.json",
+  "title": "Research Context",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "research_question": {"type": ["string", "null"]},
+    "decision_context": {"type": ["string", "null"]},
+    "analysis_mode": {"enum": ["exploratory", "decision_focused"]}
+  },
+  "required": ["research_question", "decision_context", "analysis_mode"]
+}

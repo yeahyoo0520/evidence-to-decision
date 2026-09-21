@@ -1,0 +1,33 @@
+{
+  "profile_id": "consumer_product",
+  "profile_name": "Consumer Product Research",
+  "research_goal": "Understand product perception, questions, usage, purchase behaviour, and service issues in consumer-product comments.",
+  "research_questions": [
+    "What do users praise or worry about?",
+    "Which product and purchase questions recur?",
+    "Which usage scenarios and purchase stages appear?",
+    "Which comparisons, requests, or after-sales issues require attention?"
+  ],
+  "primary_categories": ["Product Praise", "Product Concern", "Product Question", "Purchase Question", "Usage Scenario", "Competitor Comparison", "Purchase Intent", "Feature Request", "After-sales Issue", "Other"],
+  "category_definitions": {
+    "Product Praise": "Overall endorsement, satisfaction, or positive product experience.",
+    "Product Concern": "A product problem, dissatisfaction, risk, or negative experience.",
+    "Product Question": "A question about product capability, operation, compatibility, or performance.",
+    "Purchase Question": "A question about price, availability, selection, or purchase channel.",
+    "Usage Scenario": "A concrete situation in which the product is or may be used.",
+    "Competitor Comparison": "An explicit comparison, preference, or switch between alternatives.",
+    "Purchase Intent": "Current consideration, waiting, or explicit intent to buy.",
+    "Feature Request": "A requested feature, design change, or improvement.",
+    "After-sales Issue": "A service, warranty, replacement, repair, or support issue for the focal product.",
+    "Other": "Content that does not fit the product taxonomy or is about the creator/video."
+  },
+  "secondary_category_guidance": "Preserve genuine subordinate intents without repeating the primary category.",
+  "subject_options": ["product", "brand", "video_or_creator", "filming_or_editing", "another_commenter", "unrelated", "unclear"],
+  "subtopic_guidance": ["comfort", "fit/stability", "volume", "sound quality", "bass", "sound leakage", "microphone/calls", "battery", "charging", "water/rain", "compatibility", "colour/design", "availability/launch", "durability", "price", "usage context"],
+  "stage_options": ["Unknown", "Considering", "Waiting for Launch", "Purchased", "Using", "Returned", "Replacing", "Repurchasing"],
+  "review_guidance": "Use risk-based review: low and medium are preliminary by default; high risk is mandatory review.",
+  "insight_questions": ["Which product themes recur?", "Which verified evidence supports an actionable opportunity?", "Where are information or experience gaps visible?"],
+  "report_sections": ["Research Setup", "Review Workload", "Confirmed Findings", "Preliminary Insights", "Insight Review Queue"],
+  "rubric_version": "phase2a3-rubric-v1",
+  "qa_sampling": {"low": 0.10, "medium": 0.25}
+}

@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "human_review_response.schema.json",
+  "title": "Explicit human review response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["response_version", "source_bundle_sha256", "decisions"],
+  "properties": {
+    "response_version": {"const": "phase3-lite-2-v1"},
+    "source_bundle_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "decisions": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/decision"}
+    }
+  },
+  "$defs": {
+    "evidence_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["review_id", "action"],
+      "properties": {
+        "review_id": {"type": "string", "minLength": 1},
+        "action": {"enum": ["confirm", "edit", "reject"]},
+        "reviewer_note": {"type": "string"},
+        "rejection_reason": {"type": "string"},
+        "reviewed_at": {"type": ["string", "null"]},
+        "theme_name_override": {"type": ["string", "null"], "minLength": 1},
+        "theme_description_override": {"type": ["string", "null"], "minLength": 1},
+        "observation_override": {"type": ["string", "null"], "minLength": 1},
+        "interpretation_override": {"type": ["string", "null"], "minLength": 1},
+        "selected_evidence_ids": {
+          "oneOf": [{"$ref": "#/$defs/evidence_ids"}, {"type": "null"}]
+        },
+        "representative_evidence_ids": {
+          "oneOf": [
+            {
+              "allOf": [
+                {"$ref": "#/$defs/evidence_ids"},
+                {"maxItems": 3}
+              ]
+            },
+            {"type": "null"}
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"action": {"const": "edit"}}},
+          "then": {
+            "anyOf": [
+              {"required": ["theme_name_override"]},
+              {"required": ["theme_description_override"]},
+              {"required": ["observation_override"]},
+              {"required": ["interpretation_override"]},
+              {"required": ["selected_evidence_ids"]},
+              {"required": ["representative_evidence_ids"]}
+            ]
+          }
+        },
+        {
+          "if": {"properties": {"action": {"const": "reject"}}},
+          "then": {
+            "anyOf": [
+              {"required": ["rejection_reason"]},
+              {"required": ["reviewer_note"]}
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

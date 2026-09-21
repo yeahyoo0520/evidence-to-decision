@@ -1,0 +1,28 @@
+{
+  "profile_id": "gtm_research",
+  "profile_name": "Go-to-Market Research",
+  "research_goal": "Identify user value, use cases, adoption barriers, commercial questions, and message-market-fit opportunities.",
+  "research_questions": ["Why do users use or consider the product?", "Which value is actively perceived?", "What are the adoption barriers?", "Which questions recur?", "How do users compare alternatives?", "What affects trial or purchase?", "Which real use cases appear?", "Does the official message match user needs?", "Are there message-market-fit gaps?"],
+  "primary_categories": ["Use Case", "Product Value", "Adoption Barrier", "Product Question", "Pricing Concern", "Competitor Comparison", "Trial / Purchase Intent", "Feature Request", "User Experience Issue", "Other"],
+  "category_definitions": {
+    "Use Case": "A concrete job, workflow, context, or situation for use.",
+    "Product Value": "A benefit or outcome the user explicitly perceives.",
+    "Adoption Barrier": "A factor blocking trial, adoption, continued use, or organizational acceptance.",
+    "Product Question": "A question about capability, fit, integration, or operation.",
+    "Pricing Concern": "Concern about price, cost, plan, value, or commercial terms.",
+    "Competitor Comparison": "An explicit comparison, preference, or switch involving alternatives.",
+    "Trial / Purchase Intent": "Explicit intention to try, evaluate, purchase, or adopt.",
+    "Feature Request": "A requested capability or product change.",
+    "User Experience Issue": "A usability, reliability, workflow, or experience problem.",
+    "Other": "Content outside the GTM taxonomy."
+  },
+  "secondary_category_guidance": "Preserve use case, value, barrier, and intent as separate layers when explicitly present.",
+  "subject_options": ["product", "brand", "user_workflow", "creator_or_video", "competitor", "unrelated", "unclear"],
+  "subtopic_guidance": ["workflow", "integration", "onboarding", "ease of use", "reliability", "price", "value", "availability", "trial", "purchase", "switching", "support"],
+  "stage_options": ["Unknown", "Awareness", "Considering", "Trialing", "Adopted", "Using", "Churned", "Renewing"],
+  "review_guidance": "Keep observed user language distinct from strategic interpretation and require verified evidence for formal GTM conclusions.",
+  "insight_questions": ["Which value propositions are user-validated?", "Which barriers recur across sources?", "Which message or action opportunity is supported by verified evidence?"],
+  "report_sections": ["Research Setup", "Review Workload", "Confirmed Findings", "Preliminary Insights", "Insight Review Queue"],
+  "rubric_version": "phase2b-lite-gtm-v1",
+  "qa_sampling": {"low": 0.10, "medium": 0.25}
+}

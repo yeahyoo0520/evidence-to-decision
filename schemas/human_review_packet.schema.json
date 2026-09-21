@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "human_review_packet.schema.json",
+  "title": "Pending human review packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "packet_version",
+    "profile_id",
+    "source_bundle_sha256",
+    "prepared_at",
+    "items"
+  ],
+  "properties": {
+    "packet_version": {"const": "phase3-lite-2-v1"},
+    "profile_id": {"type": "string", "minLength": 1},
+    "source_bundle_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "prepared_at": {"type": "string", "minLength": 1},
+    "items": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/review_item"}
+    }
+  },
+  "$defs": {
+    "representative_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["comment_id", "comment_text"],
+      "properties": {
+        "comment_id": {"type": "string", "minLength": 1},
+        "comment_text": {"type": "string", "minLength": 1}
+      }
+    },
+    "review_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "review_id",
+        "source_theme_id",
+        "source_insight_id",
+        "theme",
+        "insight_draft",
+        "representative_evidence",
+        "review_status"
+      ],
+      "properties": {
+        "review_id": {"type": "string", "minLength": 1},
+        "source_theme_id": {"type": "string", "minLength": 1},
+        "source_insight_id": {"type": "string", "minLength": 1},
+        "theme": {"$ref": "theme.schema.json"},
+        "insight_draft": {"$ref": "insight_draft.schema.json"},
+        "representative_evidence": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/representative_evidence"}
+        },
+        "review_status": {"const": "pending_review"}
+      }
+    }
+  }
+}

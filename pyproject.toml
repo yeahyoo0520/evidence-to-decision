@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "youtube-comment-research"
+version = "0.1.0"
+description = "Turn unstructured evidence into traceable insights and decision support."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+dependencies = [
+  "httpx>=0.27,<1.0",
+  "openpyxl>=3.1,<4.0",
+  "pydantic>=2.7,<3.0",
+  "typer>=0.12,<1.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.2,<9.0"]
+
+[project.scripts]
+youtube-comment-research = "youtube_comment_research.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
